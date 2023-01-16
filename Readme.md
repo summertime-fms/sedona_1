@@ -1,10 +1,5 @@
 # Личный проект «Седона»
 
-* Студент: [Крусанов Константин](https://up.htmlacademy.ru/htmlcss/34/user/2072277).
-* Наставник: [Михаил Данюшин](https://htmlacademy.ru/profile/id225742).
-
----
-
 _Не удаляйте и не обращайте внимание на файлы:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
 

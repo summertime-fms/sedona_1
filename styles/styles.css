@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/PTSans-Regular.ttf") format("ttf");
+  src: url("../fonts/PTSans-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,16 +10,20 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/PTSans-Bold.ttf") format("ttf");
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2");
   font-display: swap;
 }
+
+/*Общие стили для страницы*/
 
 body {
   font-family: "PT Sans", sans-serif;
 
   font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 21px;
-  background-color: bisque;
+  background-color: white;
   margin: 0;
   padding: 0;
 
@@ -31,6 +35,16 @@ body {
   color: black;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 img,
@@ -44,8 +58,43 @@ video {
   object-position: center;
 }
 
+/*Стили для элементов, которые встречаются на странице множество раз*/
+
 .visually-hidden {
   visibility: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 36px;
+  background: #756157;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading b {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.heading p {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 22px;
 }
 
 .main-header {
@@ -53,6 +102,8 @@ video {
   font-size: 20px;
   height: 64px;
 }
+
+/*Стили для раздела навигации*/
 
 nav {
   display: flex;
@@ -69,6 +120,8 @@ nav {
   top: 0px;
   margin-right: 30px;
 }
+
+/*Стили для навигационных списков*/
 
 .navigation-list {
   display: flex;
@@ -104,6 +157,8 @@ nav {
   text-decoration: none;
 }
 
+/*Стили для навигационного меню справа*/
+
 .navigation-menu {
   width: 268px;
   margin: 0 0 0 auto;
@@ -117,7 +172,7 @@ nav {
 }
 
 .navigation-menu .navigation-item:first-child {
-  background-image: url('../images/search-img.png');
+  background-image: url('../images/search-img.svg');
   background-repeat: no-repeat;
   background-position: center;
   width: 44px;
@@ -126,16 +181,13 @@ nav {
 }
 
 .navigation-menu .navigation-item:nth-child(2) {
-  background-image: url('../images/selected-img.png');
+  background-image: url('../images/selected-img.svg');
   background-repeat: no-repeat;
   background-position: center;
   width:44px;
   height: 100%;
 }
 
-.navigation-menu .navigation-item .navigation-link:last-child {
-  width: 92px;
-}
 
 .navigation-menu .navigation-item:last-child {
   width: 160px;
@@ -143,19 +195,78 @@ nav {
 }
 
 .navigation-menu .navigation-item .navigation-link:last-child {
-  width: 100%;
-  height: 36px;
-  display: flex;
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 36px;
-  background: #756157;
-  border-radius: 4px;
   color: white;
   font-size: 16px;
 }
+
+/*Стили для секции hero*/
+
+.hero {
+  position: relative;
+  top: 0;
+  text-align: center;
+}
+
+.hero-background {
+  position: absolute;
+  height: 485px;
+  top: 0;
+  z-index: -2;
+}
+
+.hero-greetings {
+  width: 458px;
+  height: 352px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 7px;
+}
+
+/*Стили для разделителя*/
+
+.hero-devider-1,
+.hero-devider-2 {
+  height: 0;
+}
+
+.hero-devider-1::before,
+.hero-devider-1::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 57px solid white;
+}
+
+.hero-devider-1::before {
+  border-right: 370px solid transparent;
+}
+
+.hero-devider-1::after {
+  border-left: 370px solid transparent;
+  margin-right: auto;
+}
+
+.hero-devider-2::before,
+.hero-devider-2::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 57px solid white;
+}
+
+.hero-devider-2::before {
+  border-right: 600px solid transparent;
+}
+
+.hero-devider-2::after {
+  border-left: 600px solid transparent;
+  margin-right: auto;
+}
+
+/*Стили для текста в секции hero*/
+
+.hero-text {
+  margin-top: 150px;
+  margin-bottom: 90px;
+}
+

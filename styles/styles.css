@@ -23,7 +23,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
-  background-color: white;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
 
@@ -231,45 +231,14 @@ nav {
   margin-bottom: 4px;
 }
 
-/*Стили для разделителя*/
-
-.hero-devider-1,
-.hero-devider-2 {
-  height: 0;
-}
-
-.hero-devider-1::before,
-.hero-devider-1::after {
+.hero::after {
   content: '';
-  width: 0;
-  height: 0;
-  border-bottom: 57px solid white;
-}
-
-.hero-devider-1::before {
-  border-right: 350px solid transparent;
-}
-
-.hero-devider-1::after {
-  border-left: 350px solid transparent;
-  margin-right: auto;
-}
-
-.hero-devider-2::before,
-.hero-devider-2::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-bottom: 57px solid white;
-}
-
-.hero-devider-2::before {
-  border-right: 600px solid transparent;
-}
-
-.hero-devider-2::after {
-  border-left: 600px solid transparent;
-  margin-right: auto;
+  display: block;
+  min-width: 100%;
+  min-height: 57px;
+  background: url('../images/divider.svg');
+  position: absolute;
+  top: 428px;
 }
 
 /*Стили для текста в секции hero*/
@@ -342,6 +311,24 @@ nav {
   margin: 0;
 }
 
+.advantages-title::after {
+  content: '';
+  display: block;
+  width: 60px;;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.services .advantages-title::after {
+  display: none;
+}
+
+.advantages-item--nowrap .advantages-title::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 /*Стили для раздела поиска гостиниц*/
 
 .hotel-search-button {
@@ -352,8 +339,12 @@ nav {
 /*Стили для раздела подписки*/
 
 .subscribe {
-  background-color: rgba(131, 179, 211, 0.2);
+  background: url('../images/Subscribe.jpg');
   min-height: 415px;
+}
+
+.subscribe-text {
+  color: #ffffff;
 }
 
 .subscribe-from {

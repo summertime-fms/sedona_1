@@ -72,12 +72,18 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 160px;
-  height: 36px;
+  min-width: 160px;
+  min-height: 36px;
+  padding: 8px 50px 8px 50px;
   background: #756157;
   border-radius: 4px;
   color: white;
-  font-size: 16px;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 0;
 }
 
 a {
@@ -87,6 +93,7 @@ a {
 
 .heading {
   text-align: center;
+  margin: 96px 0 54px 0;
 }
 
 .heading b {
@@ -97,7 +104,7 @@ a {
 }
 
 .heading p {
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 0;
   font-size: 22px;
 }
@@ -120,7 +127,8 @@ nav {
 
 .header-logo {
   min-width: 140px;
-  min-height: 70px;
+  min-height: 64px;
+  max-height: 64px;
   left: 0px;
   top: 0px;
   margin-right: 30px;
@@ -134,7 +142,7 @@ nav {
   padding: 0px;
   justify-content: space-between;
   min-width: 339px;
-  height: 64px;
+  min-height: 64px;
   margin: 0;
   margin-right: auto;
 }
@@ -146,7 +154,7 @@ nav {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
-  height: 100%;
+  min-height: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,6 +193,7 @@ nav {
   background-position: center;
   min-width:44px;
   min-height: 100%;
+  overflow: hidden;
 }
 
 
@@ -193,13 +202,10 @@ nav {
   padding: 0;
 }
 
-a .navigation-link {
-  display: block;
-  height: 100%;
-}
 .navigation-menu .navigation-item .navigation-link:last-child {
   color: white;
   font-size: 16px;
+  padding: 0;
 }
 
 /*Стили для секции hero*/
@@ -222,7 +228,7 @@ a .navigation-link {
   min-height: 352px;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 /*Стили для разделителя*/
@@ -273,3 +279,151 @@ a .navigation-link {
   margin-bottom: 90px;
 }
 
+.hero-text p {
+  margin-top: 25px;
+}
+
+/*Стили для секции с преимуществами*/
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.advantages-item {
+  list-style-type: none;
+  width: 400px;
+  height: 384px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.advantages-item--nowrap {
+  min-width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #82B3D3;
+  color: #FFFFFF;
+}
+
+.advantages-item--gray {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item--light {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-content {
+  min-width: 400px;
+}
+
+.advantages-img {
+  min-height: 384px;
+}
+
+.advantages-title {
+  min-width: 175px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.advantages-description {
+  min-width: 230px;
+  margin: 0;
+}
+
+/*Стили для раздела поиска гостиниц*/
+
+.hotel-search-button {
+  margin: 0 auto;
+  margin-bottom: 96px;
+}
+
+/*Стили для раздела подписки*/
+
+.subscribe {
+  background-color: rgba(131, 179, 211, 0.2);
+  min-height: 415px;
+}
+
+.subscribe-from {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe-button {
+  background: #82B3D3;
+  border-radius: 0 4px 4px 0;
+}
+
+#subscribe-email {
+  min-width: 452px;
+  padding: 12px 20px;
+  border-radius: 4px 0px 0px 4px;
+  border: 0;
+  font-size: 18px;
+}
+
+/*Стили для футера*/
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  min-height: 120px;
+  padding: 0 70px;
+  align-items: center;
+}
+
+/*Стили для социальных сетей*/
+
+.footer-social-list {
+  display: flex;
+  min-width: 120px;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.footer-social-item {
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width:24px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.footer-social-item a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-social-item:nth-child(1) {
+  background-image: url('../images/vk.png');
+}
+
+.footer-social-item:nth-child(2) {
+  background-image: url('../images/tg.png');
+}
+
+.footer-social-item:nth-child(3) {
+  background-image: url('../images/yt.png');
+}
+
+/*Стили для телефона*/
+
+.footer-contacts-phone {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}

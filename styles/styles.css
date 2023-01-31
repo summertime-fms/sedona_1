@@ -17,8 +17,7 @@
 /*Общие стили для страницы*/
 
 body {
-  font-family: "PT Sans", sans-serif;
-
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -329,6 +328,26 @@ nav {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.services .advantages-title::before {
+  content: '';
+  display: block;
+  min-width: 80px;
+  min-height: 80px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.services .home::before {
+  background: url('../images/home.svg') center no-repeat;
+}
+
+.services .food::before {
+  background: url('../images/food.svg') center no-repeat;
+}
+
+.services .gift::before {
+  background: url('../images/gift.svg') center no-repeat;
+}
 /*Стили для раздела поиска гостиниц*/
 
 .hotel-search-button {
@@ -397,18 +416,6 @@ nav {
   display: inline-block;
   width: 100%;
   height: 100%;
-}
-
-.footer-social-item:nth-child(1) {
-  background-image: url('../images/vk.png');
-}
-
-.footer-social-item:nth-child(2) {
-  background-image: url('../images/tg.png');
-}
-
-.footer-social-item:nth-child(3) {
-  background-image: url('../images/yt.png');
 }
 
 /*Стили для телефона*/
